@@ -1,0 +1,427 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module cowtermcolor</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>cowtermcolor</strong></big></big> (version 0.2.2, May 4, 2016)</font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/n2omatt/Documents/Projects/AmazingCow/AmazingCow-Libs/cowtermcolor_py/cowtermcolor.py">/home/n2omatt/Documents/Projects/AmazingCow/AmazingCow-Libs/cowtermcolor_py/cowtermcolor.py</a></font></td></tr></table>
+    <p><tt>Smart&nbsp;color&nbsp;formating&nbsp;for&nbsp;output&nbsp;in&nbsp;terminal.<br>
+&nbsp;<br>
+cowtermcolor&nbsp;is&nbsp;a&nbsp;library&nbsp;to&nbsp;ease&nbsp;the&nbsp;terminal&nbsp;coloring.<br>
+&nbsp;<br>
+It&nbsp;was&nbsp;inspired&nbsp;by&nbsp;the&nbsp;Amazing&nbsp;Cow's&nbsp;C++&nbsp;Termcolor_cpp<br>
+(<a href="http://www.github.com/AmazingCow-Libs/Termcolor_cpp">http://www.github.com/AmazingCow-Libs/Termcolor_cpp</a>),&nbsp;which&nbsp;was<br>
+inspired&nbsp;by&nbsp;the&nbsp;python's&nbsp;termcolor<br>
+&nbsp;<br>
+With&nbsp;cowtermcolor_py&nbsp;we&nbsp;can:<br>
+&nbsp;&nbsp;&nbsp;*&nbsp;Use&nbsp;the&nbsp;colored&nbsp;function&nbsp;-&nbsp;"Same"&nbsp;as&nbsp;the&nbsp;Termcolor_cpp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;colored&nbsp;function.<br>
+&nbsp;&nbsp;&nbsp;*&nbsp;Use&nbsp;standalone&nbsp;functions&nbsp;-&nbsp;Like&nbsp;print&nbsp;<a href="#-red">red</a>("MyString"))&nbsp;+&nbsp;<a href="#-reset">reset</a>();<br>
+&nbsp;&nbsp;&nbsp;*&nbsp;Use&nbsp;functor&nbsp;objects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;This&nbsp;is&nbsp;nice&nbsp;because&nbsp;we&nbsp;can&nbsp;setup<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;coloring&nbsp;options&nbsp;and&nbsp;use&nbsp;it&nbsp;later,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;possible&nbsp;multiple&nbsp;times.<br>
+&nbsp;<br>
+Smart&nbsp;coloring:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;What&nbsp;is&nbsp;really&nbsp;nice&nbsp;in&nbsp;cowtermcolor_py&nbsp;and&nbsp;in&nbsp;Termcolor_cpp&nbsp;is&nbsp;both<br>
+&nbsp;&nbsp;&nbsp;&nbsp;libs&nbsp;knows&nbsp;if&nbsp;the&nbsp;output&nbsp;is&nbsp;the&nbsp;terminal&nbsp;or&nbsp;not,&nbsp;&nbsp;i.e.&nbsp;them&nbsp;knows<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;the&nbsp;stdout&nbsp;is&nbsp;attached&nbsp;to&nbsp;a&nbsp;tty.<br>
+&nbsp;<br>
+&nbsp;<br>
+And&nbsp;what&nbsp;we&nbsp;gain&nbsp;with&nbsp;this?<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1.&nbsp;By&nbsp;default&nbsp;it&nbsp;will&nbsp;output&nbsp;the&nbsp;coloring&nbsp;escape&nbsp;sequences<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;only&nbsp;if&nbsp;the&nbsp;stdout&nbsp;is&nbsp;a&nbsp;tty.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;Cleaner&nbsp;code&nbsp;-&nbsp;We&nbsp;don't&nbsp;need&nbsp;check&nbsp;the&nbsp;output&nbsp;anymore<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(If&nbsp;we&nbsp;want&nbsp;the&nbsp;default).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;3.&nbsp;More&nbsp;cleaner&nbsp;code&nbsp;-&nbsp;To&nbsp;enable,&nbsp;or&nbsp;disable&nbsp;the&nbsp;coloring<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;we&nbsp;can&nbsp;set&nbsp;it&nbsp;only&nbsp;once.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="cowtermcolor.html#Color">Color</a>
+</font></dt><dt><font face="helvetica, arial"><a href="cowtermcolor.html#ColorMode">ColorMode</a>
+</font></dt><dt><font face="helvetica, arial"><a href="cowtermcolor.html#ConvertMode">ConvertMode</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Color">class <strong>Color</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Holds&nbsp;a&nbsp;set&nbsp;of&nbsp;coloring&nbsp;parameters&nbsp;into&nbsp;a&nbsp;nice&nbsp;<a href="__builtin__.html#object">object</a>.<br>
+&nbsp;<br>
+This&nbsp;enables&nbsp;you&nbsp;group&nbsp;a&nbsp;set&nbsp;of&nbsp;different&nbsp;parameters<br>
+and&nbsp;reuse&nbsp;them&nbsp;with&nbsp;ease.<br>
+&nbsp;<br>
+Example:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;greyOnRedBlinking&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<a href="#Color">Color</a>(GREY,&nbsp;RED,&nbsp;[BLINK]);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;redOnBlueBoldUnderline&nbsp;=&nbsp;<a href="#Color">Color</a>(GREY,&nbsp;RED,&nbsp;[BOLD,&nbsp;UNDERLINE]);<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print&nbsp;greyOnRedBlinking("Hi&nbsp;there...");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print&nbsp;redOnBlueBoldUnderline("I&nbsp;&lt;3&nbsp;cowtermcolor");<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Color-__call__"><strong>__call__</strong></a>(self, s<font color="#909090">=''</font>, auto_reset<font color="#909090">=True</font>)</dt><dd><tt><a href="#Color-__call__">__call__</a>(self,&nbsp;s&nbsp;=&nbsp;"")&nbsp;-&gt;&nbsp;str<br>
+&nbsp;<br>
+Makes&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;callable&nbsp;-&nbsp;It&nbsp;will&nbsp;apply<br>
+the&nbsp;foreground&nbsp;colors,&nbsp;next&nbsp;the&nbsp;background&nbsp;colors<br>
+and&nbsp;after&nbsp;that&nbsp;the&nbsp;attributes.<br>
+&nbsp;<br>
+Notice&nbsp;that&nbsp;this&nbsp;function&nbsp;is&nbsp;affected&nbsp;by:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.<br>
+&nbsp;<br>
+Example:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;redBlinking&nbsp;=&nbsp;<a href="#Color">Color</a>(RED,&nbsp;None,&nbsp;BLINK);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print&nbsp;redBlinking("Roses&nbsp;are&nbsp;red");</tt></dd></dl>
+
+<dl><dt><a name="Color-__init__"><strong>__init__</strong></a>(self, fg<font color="#909090">=None</font>, bg<font color="#909090">=None</font>, list_of_attr<font color="#909090">=None</font>)</dt><dd><tt>No&nbsp;validation&nbsp;checks&nbsp;are&nbsp;made&nbsp;on&nbsp;given&nbsp;argument&nbsp;values<br>
+Users&nbsp;should&nbsp;call&nbsp;it&nbsp;only&nbsp;with&nbsp;the&nbsp;'constants'<br>
+defined&nbsp;in&nbsp;this&nbsp;module.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ColorMode">class <strong>ColorMode</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Global&nbsp;<a href="#Color">Color</a>&nbsp;Modes&nbsp;-&nbsp;MODIFY&nbsp;ALL&nbsp;COLORING&nbsp;FUNCTIONS.<br>
+&nbsp;<br>
+This&nbsp;class&nbsp;defines&nbsp;how&nbsp;the&nbsp;coloring&nbsp;functions&nbsp;will&nbsp;behave.<br>
+&nbsp;<br>
+To&nbsp;change&nbsp;the&nbsp;behavior&nbsp;assign&nbsp;a&nbsp;new&nbsp;value&nbsp;to&nbsp;<a href="#ColorMode">ColorMode</a>.mode.<br>
+&nbsp;<br>
+The&nbsp;possible&nbsp;<a href="#Color">Color</a>&nbsp;modes&nbsp;are:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ONLY_IF_TERMINAL<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Color">Color</a>&nbsp;escapes&nbsp;codes&nbsp;are&nbsp;only&nbsp;put&nbsp;into&nbsp;the&nbsp;strings&nbsp;if<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;os.stdout&nbsp;is&nbsp;assigned&nbsp;to&nbsp;a&nbsp;tty.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;enables&nbsp;code&nbsp;to&nbsp;don't&nbsp;care&nbsp;the&nbsp;type&nbsp;of&nbsp;the&nbsp;stdout<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i.e.&nbsp;if&nbsp;a&nbsp;pipe,&nbsp;file,&nbsp;or&nbsp;tty.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;the&nbsp;os.stdout&nbsp;isn't&nbsp;assigned&nbsp;to&nbsp;a&nbsp;tty&nbsp;all&nbsp;coloring<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;functions&nbsp;will&nbsp;return&nbsp;the&nbsp;unmodified&nbsp;string.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ALWAYS<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Don't&nbsp;care&nbsp;for&nbsp;where&nbsp;the&nbsp;os.stdout&nbsp;is&nbsp;assigned.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Put&nbsp;the&nbsp;coloring&nbsp;escape&nbsp;sequences&nbsp;anyway.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;NEVER<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Don't&nbsp;care&nbsp;for&nbsp;where&nbsp;the&nbsp;os.stdout&nbsp;is&nbsp;assigned.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO&nbsp;NOT&nbsp;put&nbsp;the&nbsp;coloring&nbsp;escape&nbsp;sequences&nbsp;anyway.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;DEFAULT<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Same&nbsp;of&nbsp;ONLY_IF_TERMINAL<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>ALWAYS</strong> = 1</dl>
+
+<dl><dt><strong>DEFAULT</strong> = 0</dl>
+
+<dl><dt><strong>NEVER</strong> = 2</dl>
+
+<dl><dt><strong>ONLY_IF_TERMINAL</strong> = 0</dl>
+
+<dl><dt><strong>mode</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ConvertMode">class <strong>ConvertMode</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Global&nbsp;Convert&nbsp;Modes&nbsp;-&nbsp;MODIFY&nbsp;ALL&nbsp;COLORING&nbsp;FUNCTIONS.<br>
+&nbsp;<br>
+This&nbsp;class&nbsp;defines&nbsp;how&nbsp;the&nbsp;conversions&nbsp;will&nbsp;be&nbsp;applied&nbsp;when&nbsp;values<br>
+of&nbsp;types&nbsp;is&nbsp;passed&nbsp;to&nbsp;any&nbsp;coloring&nbsp;function.<br>
+&nbsp;<br>
+To&nbsp;change&nbsp;the&nbsp;behavior&nbsp;assign&nbsp;a&nbsp;new&nbsp;value&nbsp;to&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.<br>
+&nbsp;<br>
+The&nbsp;possible&nbsp;convert&nbsp;modes&nbsp;are:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ALL_TYPES_TO_STR<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any&nbsp;given&nbsp;type,&nbsp;but&nbsp;str,&nbsp;will&nbsp;be&nbsp;passed&nbsp;into&nbsp;str().<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ALL_TYPES_TO_TO_EMPTY_STR<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any&nbsp;given&nbsp;type,&nbsp;but&nbsp;str,&nbsp;will&nbsp;be&nbsp;replaced&nbsp;by&nbsp;an&nbsp;empty&nbsp;str.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;NONE_TYPE_TO_EMPTY_STR<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Only&nbsp;the&nbsp;None&nbsp;type&nbsp;will&nbsp;be&nbsp;replaced&nbsp;by&nbsp;an&nbsp;empty&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;all&nbsp;other&nbsp;types&nbsp;will&nbsp;passed&nbsp;into&nbsp;str().<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;RAISE_VALUE_ERROR_FOR_ALL_TYPES<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;ValueError&nbsp;exception&nbsp;will&nbsp;be&nbsp;raised&nbsp;if&nbsp;the&nbsp;type&nbsp;isn't&nbsp;str.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;RAISE_VALUE_ERROR_FOR_NONE_TYPE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;ValueError&nbsp;exception&nbsp;will&nbsp;be&nbsp;raised&nbsp;only&nbsp;for&nbsp;None&nbsp;type.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;DEFAULT<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Equal&nbsp;to&nbsp;ALL_TYPES_TO_STR;<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>ALL_TYPES_TO_STR</strong> = 0</dl>
+
+<dl><dt><strong>ALL_TYPES_TO_TO_EMPTY_STR</strong> = 1</dl>
+
+<dl><dt><strong>DEFAULT</strong> = 0</dl>
+
+<dl><dt><strong>NONE_TYPE_TO_EMPTY_STR</strong> = 2</dl>
+
+<dl><dt><strong>RAISE_VALUE_ERROR_FOR_ALL_TYPES</strong> = 3</dl>
+
+<dl><dt><strong>RAISE_VALUE_ERROR_FOR_NONE_TYPE</strong> = 4</dl>
+
+<dl><dt><strong>mode</strong> = 0</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-blink"><strong>blink</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-blink">blink</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;blink&nbsp;attribute&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;'s'.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-blue"><strong>blue</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-blue">blue</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;blue&nbsp;foreground&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;the&nbsp;'s'.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-bold"><strong>bold</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-bold">bold</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;bold&nbsp;attribute&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;'s'.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-code_to_escape_str"><strong>code_to_escape_str</strong></a>(code)</dt><dd><tt><a href="#-code_to_escape_str">code_to_escape_str</a>(code)&nbsp;-&gt;&nbsp;str<br>
+Returns&nbsp;the&nbsp;raw&nbsp;escape&nbsp;sequence&nbsp;string.<br>
+&nbsp;<br>
+No&nbsp;validation&nbsp;is&nbsp;made&nbsp;to&nbsp;ensure&nbsp;that&nbsp;the&nbsp;resulting<br>
+sequence&nbsp;will&nbsp;be&nbsp;valid&nbsp;-&nbsp;Users&nbsp;should&nbsp;call&nbsp;it&nbsp;only<br>
+with&nbsp;the&nbsp;'constants'&nbsp;defined&nbsp;in&nbsp;this&nbsp;module.<br>
+&nbsp;<br>
+Example:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-code_to_escape_str">code_to_escape_str</a>(cowtercolor.BLUE)&nbsp;-&gt;&nbsp;"\033[34m"</tt></dd></dl>
+ <dl><dt><a name="-colored"><strong>colored</strong></a>(s, fg<font color="#909090">=None</font>, bg<font color="#909090">=None</font>, attrs<font color="#909090">=None</font>)</dt><dd><tt><a href="#-colored">colored</a>(s,&nbsp;fg=None,&nbsp;bg=None,&nbsp;attrs=None)&nbsp;-&gt;&nbsp;str<br>
+&nbsp;<br>
+Builds&nbsp;the&nbsp;colored&nbsp;output&nbsp;in&nbsp;one&nbsp;function.<br>
+It&nbsp;will&nbsp;put&nbsp;the&nbsp;foreground&nbsp;color,&nbsp;then&nbsp;the&nbsp;background&nbsp;and&nbsp;after&nbsp;all<br>
+the&nbsp;attributes&nbsp;if&nbsp;there&nbsp;are&nbsp;any.<br>
+&nbsp;<br>
+str&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;The&nbsp;string&nbsp;that&nbsp;will&nbsp;be&nbsp;colored.(Mandatory)<br>
+foreground&nbsp;-&nbsp;A&nbsp;valid&nbsp;foreground&nbsp;color&nbsp;code.&nbsp;&nbsp;(Optional)<br>
+background&nbsp;-&nbsp;A&nbsp;valid&nbsp;background&nbsp;color&nbsp;code.&nbsp;&nbsp;(Optional)<br>
+attributes&nbsp;-&nbsp;A&nbsp;valid&nbsp;attributes&nbsp;codes.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Optional)<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;will&nbsp;not&nbsp;check&nbsp;the&nbsp;validity&nbsp;of&nbsp;the&nbsp;color&nbsp;codes,<br>
+so&nbsp;is&nbsp;user's&nbsp;responsibility&nbsp;to&nbsp;ensure&nbsp;that&nbsp;them&nbsp;are&nbsp;valid.<br>
+&nbsp;<br>
+The&nbsp;best&nbsp;bet&nbsp;is&nbsp;use&nbsp;the&nbsp;cowtermcolor&nbsp;constants.</tt></dd></dl>
+ <dl><dt><a name="-conceale"><strong>conceale</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-conceale">conceale</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;conceale&nbsp;attribute&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;'s'.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-cyan"><strong>cyan</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-cyan">cyan</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;cyan&nbsp;foreground&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;the&nbsp;'s'.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-dark"><strong>dark</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-dark">dark</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;dark&nbsp;attribute&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;'s'.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-green"><strong>green</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-green">green</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;green&nbsp;foreground&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;the&nbsp;'s'.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-grey"><strong>grey</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-grey">grey</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;grey&nbsp;foreground&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;the&nbsp;'s'.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-magenta"><strong>magenta</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-magenta">magenta</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;grey&nbsp;foreground&nbsp;magenta&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;the&nbsp;'s'.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-on_blue"><strong>on_blue</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-on_blue">on_blue</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;blue&nbsp;background&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;'s'<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-on_cyan"><strong>on_cyan</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-on_cyan">on_cyan</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;cyan&nbsp;background&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;'s'<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-on_green"><strong>on_green</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-on_green">on_green</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;green&nbsp;background&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;'s'<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-on_grey"><strong>on_grey</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-on_grey">on_grey</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;grey&nbsp;background&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;'s'<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-on_magenta"><strong>on_magenta</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-on_magenta">on_magenta</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;magenta&nbsp;background&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;'s'<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-on_red"><strong>on_red</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-on_red">on_red</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;red&nbsp;background&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;'s'<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-on_white"><strong>on_white</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-on_white">on_white</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;white&nbsp;background&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;'s'<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-on_yellow"><strong>on_yellow</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-on_yellow">on_yellow</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;yellow&nbsp;background&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;'s'<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-red"><strong>red</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-red">red</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;red&nbsp;escape&nbsp;foreground&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;the&nbsp;'s'.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-remove_all_escape_codes"><strong>remove_all_escape_codes</strong></a>(s)</dt><dd><tt><a href="#-remove_all_escape_codes">remove_all_escape_codes</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Removes&nbsp;(if&nbsp;any)&nbsp;all&nbsp;escapes&nbsp;sequences&nbsp;in&nbsp;the&nbsp;'s'&nbsp;string.<br>
+&nbsp;<br>
+Example:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-remove_all_escape_codes">remove_all_escape_codes</a>(<a href="#-green">green</a>("Amazing&nbsp;Cow"))&nbsp;-&gt;&nbsp;"Amazing&nbsp;Cow"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-remove_all_escape_codes">remove_all_escape_codes</a>("Plain&nbsp;string")&nbsp;-&gt;&nbsp;"Plain&nbsp;string"</tt></dd></dl>
+ <dl><dt><a name="-reset"><strong>reset</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-reset">reset</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;reset&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;the&nbsp;'s'<br>
+canceling&nbsp;all&nbsp;previous&nbsp;coloring.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-reverse"><strong>reverse</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-reverse">reverse</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;reverse&nbsp;attribute&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;'s'.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-str_len"><strong>str_len</strong></a>(s)</dt><dd><tt><a href="#-str_len">str_len</a>(s)&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Count&nbsp;the&nbsp;number&nbsp;of&nbsp;chars&nbsp;in&nbsp;string&nbsp;disregarding&nbsp;all&nbsp;coloring<br>
+escape&nbsp;sequences&nbsp;-&nbsp;Same&nbsp;as&nbsp;len(<a href="#-remove_all_escape_codes">remove_all_escape_codes</a>(s))</tt></dd></dl>
+ <dl><dt><a name="-underline"><strong>underline</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-underline">underline</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;underline&nbsp;attribute&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;'s'.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-white"><strong>white</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-white">white</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;white&nbsp;foreground&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;the&nbsp;'s'.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+ <dl><dt><a name="-yellow"><strong>yellow</strong></a>(s<font color="#909090">=''</font>)</dt><dd><tt><a href="#-yellow">yellow</a>(s)&nbsp;-&gt;&nbsp;str<br>
+Put&nbsp;the&nbsp;yellow&nbsp;foreground&nbsp;escape&nbsp;sequence&nbsp;in&nbsp;front&nbsp;of&nbsp;the&nbsp;'s'.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;is&nbsp;affected&nbsp;by&nbsp;the&nbsp;values&nbsp;of:<br>
+<a href="#ColorMode">ColorMode</a>.mode&nbsp;and&nbsp;<a href="#ConvertMode">ConvertMode</a>.mode.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>BLINK</strong> = 5<br>
+<strong>BLUE</strong> = 34<br>
+<strong>BOLD</strong> = 1<br>
+<strong>CONCEALED</strong> = 8<br>
+<strong>CYAN</strong> = 36<br>
+<strong>DARK</strong> = 2<br>
+<strong>GREEN</strong> = 32<br>
+<strong>GREY</strong> = 30<br>
+<strong>MAGENTA</strong> = 35<br>
+<strong>ON_BLUE</strong> = 44<br>
+<strong>ON_CYAN</strong> = 46<br>
+<strong>ON_GREEN</strong> = 42<br>
+<strong>ON_GREY</strong> = 40<br>
+<strong>ON_MAGENTA</strong> = 45<br>
+<strong>ON_RED</strong> = 41<br>
+<strong>ON_WHITE</strong> = 47<br>
+<strong>ON_YELLOW</strong> = 43<br>
+<strong>RED</strong> = 31<br>
+<strong>RESET</strong> = 0<br>
+<strong>REVERSE</strong> = 7<br>
+<strong>UNDERLINE</strong> = 4<br>
+<strong>WHITE</strong> = 37<br>
+<strong>YELLOW</strong> = 33<br>
+<strong>__author__</strong> = 'n2omatt - &lt;n2omatt@amazingcow.com&gt;'<br>
+<strong>__copyright__</strong> = 'Copyright 2016 - Amazing Cow '<br>
+<strong>__date__</strong> = 'May 4, 2016'<br>
+<strong>__license__</strong> = 'GPLv3'<br>
+<strong>__version__</strong> = '0.2.2'</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#7799ee">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Author</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#7799ee"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">n2omatt&nbsp;-&nbsp;&lt;n2omatt@amazingcow.com&gt;</td></tr></table>
+</body></html>

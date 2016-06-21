@@ -17,7 +17,7 @@ while(True):
 
     line = line.replace("\n", "");
     if(re.search("\{\!.*\!\}", line)):
-        snippet_name = line.replace("{!", "").replace("!}", "");
+        snippet_name = line.replace("{!", "").replace("!}", "").replace("<p>", "").replace("</p>", "");
         snippet_path = os.path.join(snippets_dir, snippet_name);
         snippet_lines = open(snippet_path).readlines();
         for line in snippet_lines:

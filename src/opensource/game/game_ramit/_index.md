@@ -45,8 +45,8 @@ Thanks!
 
 ### Source packages:
 
-* zip    - [Download](./downloads/source_v1_0_0.zip)
-* tar.gz - [Download](./downloads/source_v1_0_0.tar.gz)
+* zip    - [Download](./downloads/source_game_ramit_v1_0_0.zip)
+* tar.gz - [Download](./downloads/source_game_ramit_v1_0_0.tar.gz)
 
 
 ## Screenshots

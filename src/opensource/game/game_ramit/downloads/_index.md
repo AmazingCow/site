@@ -18,7 +18,7 @@ Linux:
 Source:
 
 * [tar.gz](./source_game_ramit_v1_0_0.tar.gz)
-* [tar.gz](./source_game_ramit_v1_0_0.zip)
+* [zip](./source_game_ramit_v1_0_0.zip)
 
 {!FOOTER!}
 {!HTMLEND!}

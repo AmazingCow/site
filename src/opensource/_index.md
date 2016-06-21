@@ -10,7 +10,7 @@
 
 * [Game_BowAndArrow]
 * [Game_CatTrax]
-* [Game_Kaboom]
+* [Game_Kaboom](./game/game_kaboom)
 * [Game_Snake]
 * [Game_Taz]
 * [Game_RamIt](./game/game_ramit)

@@ -17,7 +17,7 @@ DOXYGEN_DST=$DST_DIR
 cd $SRC_DIR
 
 git pull --quiet origin master
-$AMAZINGCOW_ENV_DOXYGEN Doxyfile >/dev/null 2>&1
+doxygen Doxyfile >/dev/null 2>&1
 
 git pull --quiet origin master
 cd $DST_DIR >/dev/null 2>&1

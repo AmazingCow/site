@@ -96,8 +96,9 @@ start_md_processing()
         echo "Final : $TARGET_DIR/$TARGET_FILE";
 
         mkdir -p $TARGET_DIR;
+
         echo "<!-- Build $BUILD_NUMBER - Date $BUILD_DATE -->" > $TARGET_DIR/$TARGET_FILE
-        cat $CURRENT_DIR/$CURRENT_FILE | $SNIPPETS | $AMAZINGCOW_ENV_MARKDOWN >> $TARGET_DIR/$TARGET_FILE;
+        cat $CURRENT_DIR/$CURRENT_FILE |  markdown  | $SNIPPETS >> $TARGET_DIR/$TARGET_FILE;
 
     done < $TEMP_FILE #MD Processing.
 }
@@ -107,7 +108,7 @@ start_file_copy()
     echo -en $COLOR_FILE_COPYING;
     echo "File Copying.-----------------------------------------------------------"
 
-    find $SRC_DIR -type f -not -path '*/\.*'  -not -iname "_*.md" >  $TEMP_FILE;
+    find $SRC_DIR -type f -not -path '*/\.*'  -not -iname "_*.*" >  $TEMP_FILE;
     FILES_TO_COPY=$(cat $TEMP_FILE | wc -l);
 
     while read LINE; do
@@ -161,9 +162,9 @@ commit_build()
 update_build_number
 start_create_dir_tree
 start_local_build
-# start_md_processing
-# start_file_copy
-# move_build_temp
+start_md_processing
+start_file_copy
+move_build_temp
 # commit_build
 
 echo -en $COLOR_RESET;

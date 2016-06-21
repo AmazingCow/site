@@ -1,11 +1,11 @@
 {!HTMLSTART!}
 {!NAVIGATIONBAR!}
 
-# Game RamIt 
+# Game Kaboom
 
 ## Posts
 
-There is no post for Game RamIt yet...
+There is no post for Game Kaboom yet...
 
 {!FOOTER!}
 {!HTMLEND!}

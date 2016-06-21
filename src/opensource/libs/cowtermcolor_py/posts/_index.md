@@ -1,5 +1,5 @@
-{!HTML_START!}
-{!NAVIGATION_BAR!}
+{!HTMLSTART!}
+{!NAVIGATIONBAR!}
 
 # cowtermcolor_py
 
@@ -8,4 +8,4 @@
 There is no post for cowtermcolor_py yet...
 
 {!FOOTER!}
-{!HTML_END!}
+{!HTMLEND!}

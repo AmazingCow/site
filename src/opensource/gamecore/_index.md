@@ -1,5 +1,5 @@
-{!HTML_START!}
-{!NAVIGATION_BAR!}
+{!HTMLSTART!}
+{!NAVIGATIONBAR!}
 
 # Amazing Cow Game Cores.
 
@@ -26,4 +26,4 @@
 
 
 {!FOOTER!}
-{!HTML_END!}
+{!HTMLEND!}

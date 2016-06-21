@@ -1,5 +1,5 @@
-{!HTML_START!}
-{!NAVIGATION_BAR!}
+{!HTMLSTART!}
+{!NAVIGATIONBAR!}
 
 # CoreMinesweeper 
 
@@ -8,4 +8,4 @@
 There is no post for CoreMinesweeper yet...
 
 {!FOOTER!}
-{!HTML_END!}
+{!HTMLEND!}

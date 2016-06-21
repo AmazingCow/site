@@ -1,5 +1,5 @@
-{!HTML_START!}
-{!NAVIGATION_BAR!}
+{!HTMLSTART!}
+{!NAVIGATIONBAR!}
 
 # CoreWordsSearch
 
@@ -13,4 +13,4 @@
 
 
 {!FOOTER!}
-{!HTML_END!}
+{!HTMLEND!}

@@ -1,5 +1,5 @@
-{!HTML_START!}
-{!NAVIGATION_BAR!}
+{!HTMLSTART!}
+{!NAVIGATIONBAR!}
 
 
 # Contact
@@ -14,4 +14,4 @@
 
 
 {!FOOTER!}
-{!HTML_END!}
+{!HTMLEND!}

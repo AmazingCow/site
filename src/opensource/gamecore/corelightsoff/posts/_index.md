@@ -1,5 +1,5 @@
-{!HTML_START!}
-{!NAVIGATION_BAR!}
+{!HTMLSTART!}
+{!NAVIGATIONBAR!}
 
 # CoreLightsOff 
 
@@ -8,4 +8,4 @@
 There is no post for CoreLightsOff yet...
 
 {!FOOTER!}
-{!HTML_END!}
+{!HTMLEND!}

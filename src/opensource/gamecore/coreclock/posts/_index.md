@@ -1,5 +1,5 @@
-{!HTML_START!}
-{!NAVIGATION_BAR!}
+{!HTMLSTART!}
+{!NAVIGATIONBAR!}
 
 # CoreClock 
 
@@ -8,4 +8,4 @@
 There is no post for CoreClock yet...
 
 {!FOOTER!}
-{!HTML_END!}
+{!HTMLEND!}

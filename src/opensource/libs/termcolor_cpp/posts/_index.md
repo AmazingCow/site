@@ -1,5 +1,5 @@
-{!HTML_START!}
-{!NAVIGATION_BAR!}
+{!HTMLSTART!}
+{!NAVIGATIONBAR!}
 
 # Termcolor_cpp 
 
@@ -8,4 +8,4 @@
 There is no post for Termcolor_cpp yet...
 
 {!FOOTER!}
-{!HTML_END!}
+{!HTMLEND!}

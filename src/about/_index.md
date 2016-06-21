@@ -1,7 +1,7 @@
-{!HTML_START!}
-{!NAVIGATION_BAR!}
+{!HTMLSTART!}
+{!NAVIGATIONBAR!}
 
 # About
 
 {!FOOTER!}
-{!HTML_END!}
+{!HTMLEND!}

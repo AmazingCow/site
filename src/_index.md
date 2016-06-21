@@ -1,5 +1,5 @@
-{!HTML_START!}
-{!NAVIGATION_BAR!}
+{!HTMLSTART!}
+{!NAVIGATIONBAR!}
 
 <center>
 <pre>
@@ -21,4 +21,4 @@ Sorry about the mess, we're fixing some things yet :D
 </center>
 
 {!FOOTER!}
-{!HTML_END!}
+{!HTMLEND!}

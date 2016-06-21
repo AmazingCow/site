@@ -1,5 +1,5 @@
-{!HTML_START!}
-{!NAVIGATION_BAR!}
+{!HTMLSTART!}
+{!NAVIGATIONBAR!}
 
 # CoreRandom 
 
@@ -8,4 +8,4 @@
 There is no post for CoreRandom yet...
 
 {!FOOTER!}
-{!HTML_END!}
+{!HTMLEND!}

@@ -1,5 +1,5 @@
-{!HTML_START!}
-{!NAVIGATION_BAR!}
+{!HTMLSTART!}
+{!NAVIGATIONBAR!}
 
 # CoreMemory 
 
@@ -8,4 +8,4 @@
 There is no post for CoreMemory yet...
 
 {!FOOTER!}
-{!HTML_END!}
+{!HTMLEND!}

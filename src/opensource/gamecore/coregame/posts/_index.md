@@ -1,5 +1,5 @@
-{!HTML_START!}
-{!NAVIGATION_BAR!}
+{!HTMLSTART!}
+{!NAVIGATIONBAR!}
 
 # CoreGame
 
@@ -8,4 +8,4 @@
 There is no post for CoreGame yet...
 
 {!FOOTER!}
-{!HTML_END!}
+{!HTMLEND!}

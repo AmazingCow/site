@@ -1,5 +1,5 @@
-{!HTML_START!}
-{!NAVIGATION_BAR!}
+{!HTMLSTART!}
+{!NAVIGATIONBAR!}
 
 # CoreGenius
 
@@ -13,4 +13,4 @@
 
 
 {!FOOTER!}
-{!HTML_END!}
+{!HTMLEND!}

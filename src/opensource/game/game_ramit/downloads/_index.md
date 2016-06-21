@@ -7,7 +7,7 @@
 
 Linux:
 
-* [Linux x64]()
+* [Linux x64](./linux_x64_v1_0_0.zip)
 
 <!-- * [Linux x86]() -->
 
@@ -17,7 +17,8 @@ Linux:
 
 Source:
 
-* [Source]()
+* [tar.gz](./source_game_ramit_v1_0_0.tar.gz)
+* [tar.gz](./source_game_ramit_v1_0_0.zip)
 
 {!FOOTER!}
 {!HTMLEND!}

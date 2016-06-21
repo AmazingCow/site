@@ -37,7 +37,7 @@ Thanks!
 
 ### Binary pagackes:
 
-* Linux x64 - [Download](./downloads/linux_x64_v0_1_0.zip)
+* Linux x64 - [Download](./downloads/linux_x64_v1_0_0.zip)
 
 <!-- * Linux x86 - [Download](./downloads/linux_x86_v0_1_0.zip)  -->
 <!-- * OSX x64   - [Download](./downloads/osx_x64_v0_1_0.zip) -->
@@ -45,8 +45,8 @@ Thanks!
 
 ### Source packages:
 
-* zip    - [Download](./downloads/source_v0_1_0.zip)
-* tar.gz - [Download](./downloads/source_v0_1_0.tar.gz)
+* zip    - [Download](./downloads/source_v1_0_0.zip)
+* tar.gz - [Download](./downloads/source_v1_0_0.tar.gz)
 
 
 ## Screenshots

@@ -1,14 +1,13 @@
 {!HTMLSTART!}
 {!NAVIGATIONBAR!}
 
-# Amazing Cow Game Cores.
+# Amazing Cow's Game Cores.
 
 <!-- ####################################################################### -->
 
 ### Game-Core:
 
 * [CoreClock](./coreclock/)
-* [CoreColorGrid](./corecolorgrid/)
 * [CoreCoord](./corecoord/)
 * [CoreGame](./coregame/)
 * [CoreGenius](./coregenius/)
@@ -21,8 +20,6 @@
 * [CorePuzzle15](./corepuzzle15/)
 * [CorePuzzle16](./corepuzzle16/)
 * [CoreRandom](./corerandom/)
-* [CoreSnake](./coresnake/)
-* [CoreWordsSearch](./corewordssearch/)
 
 
 {!FOOTER!}

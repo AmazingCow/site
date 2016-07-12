@@ -1,7 +1,0 @@
-{!HTMLSTART!}
-{!NAVIGATIONBAR!}
-
-# About
-
-{!FOOTER!}
-{!HTMLEND!}

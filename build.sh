@@ -9,18 +9,18 @@ fi;
 ORIGINAL_CWD=$(pwd);
 
 
-## Download the repositories if needed.
-# ./download_amazingcow.py
+# Download the repositories if needed.
+./download_amazingcow.py
 
-# ## Build the Doxygen docs in each repo.
-# cd ./repos
-# for DIR in $(ls); do
-#     echo $DIR;
-#     cd $DIR;
-#     pwd;
-#     doxygen
-#     cd ..
-# done;
+## Build the Doxygen docs in each repo.
+cd ./repos
+for DIR in $(ls); do
+    echo $DIR;
+    cd $DIR;
+    pwd;
+    doxygen
+    cd ..
+done;
 
 ## Create the projects dir that will hold
 ## the documentation generated.

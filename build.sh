@@ -8,7 +8,7 @@ fi;
 
 ORIGINAL_CWD=$(pwd);
 TARGET_DIR=$(readlink -f $TARGET_DIR);
-TEMP_DIR="./temp";
+TEMP_DIR=$(readlink -f ./temp);
 
 ## Download the repositories if needed.
 ./download_amazingcow.py

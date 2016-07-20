@@ -7,9 +7,10 @@ if [ -z "$TARGET_DIR" ]; then
 fi;
 
 ORIGINAL_CWD=$(pwd);
+TARGET_DIR=$(readlink -f $TARGET_DIR);
+TEMP_DIR="./temp";
 
-
-# Download the repositories if needed.
+## Download the repositories if needed.
 ./download_amazingcow.py
 
 ## Build the Doxygen docs in each repo.
@@ -38,11 +39,22 @@ for DIR in $(ls); do
 done;
 
 
-## Clean up the target dir and copy everything
-## that was build to there.
+# ## Clean up the target dir
 cd $ORIGINAL_CWD;
+rm -rf   $TEMP_DIR;
+mkdir -p $TEMP_DIR;
 
-rm -rf $TARGET_DIR;
-mkdir -p $TARGET_DIR;
-cp -rf index.html $TARGET_DIR;
-cp -rf projects   $TARGET_DIR;
+
+## Create the ~n2omatt stuff.
+cd \~n2omatt
+./build.sh $TEMP_DIR
+
+
+## Copy everything that was build to there.
+cd $ORIGINAL_CWD;
+cp -rf index.html $TEMP_DIR;
+cp -rf projects   $TEMP_DIR;
+
+
+rm -rf $TARGET_DIR
+mv $TEMP_DIR $TARGET_DIR

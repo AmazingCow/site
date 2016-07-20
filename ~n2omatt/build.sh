@@ -26,7 +26,8 @@ rm -rf $OUTPUT_DIR;
 mkdir -p $OUTPUT_DIR;
 
 ## Copy the stuff...
-cp index.html  $OUTPUT_DIR
-cp -rf resume  $OUTPUT_DIR
-cp -rf img     $OUTPUT_DIR
-cp -rf certs   $OUTPUT_DIR
+cp index.html   $OUTPUT_DIR
+cp -rf resume   $OUTPUT_DIR
+cp -rf img      $OUTPUT_DIR
+cp -rf certs    $OUTPUT_DIR
+cp -rf lectures $OUTPUT_DIR

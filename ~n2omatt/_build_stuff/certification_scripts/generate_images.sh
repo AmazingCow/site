@@ -11,7 +11,7 @@
 ################################################################################
 ## Vars                                                                       ##
 ################################################################################
-SITE_ROOT_PATH=$(realpath $PWD/../..)
+SITE_ROOT_PATH=$(readline -f $PWD/../..)
 SOURCE_PATH=$SITE_ROOT_PATH/_build_stuff/MyCerts
 DESTINATION_PATH=$SITE_ROOT_PATH/certs
 

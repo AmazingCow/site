@@ -11,7 +11,7 @@
 ################################################################################
 ## Vars                                                                       ##
 ################################################################################
-SITE_ROOT_PATH=$(readline -f $PWD/../..)
+SITE_ROOT_PATH=$(readlink -f $PWD/../..)
 SOURCE_PATH=$SITE_ROOT_PATH/_build_stuff/MyCerts
 IMAGES_PATH=$SITE_ROOT_PATH/certs
 HTMLS_PATH=$SITE_ROOT_PATH/certs
@@ -71,7 +71,7 @@ create_certifications_pages()
         IMAGE_URL=$(url_encode $IMAGE_URL);
 
         #Create the full path of page.
-        OUTPUT_FULLPATH=$(readline -f -m $HTMLS_PATH/$CERTIFICATION_NAME.html);
+        OUTPUT_FULLPATH=$(readlink -f -m $HTMLS_PATH/$CERTIFICATION_NAME.html);
 
         #Show the current page...
         echo $OUTPUT_FULLPATH;

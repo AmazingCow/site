@@ -1,6 +1,11 @@
 #!/usr/bin/python
+################################################################################
+## file   : build.sh                                                          ##
+## date   : Nov 3, 2016                                                       ##
+## author : n2omatt <n2o.matt@gmail.com>                                      ##
+################################################################################
 
-index_source_filename = "../../_index_original.html";
+index_source_filename = "../../index_original.html";
 certs_source_filename = "../../certs.html";
 index_target_filename = "../../index.html";
 

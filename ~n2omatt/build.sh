@@ -1,44 +1,50 @@
 #!/bin/bash
 
 ################################################################################
-## Vars                                                                       ##
+## Helper Functions                                                           ##
 ################################################################################
-TARGET_DIR=$1;
-if [ -z "$TARGET_DIR" ]; then
-    TARGET_DIR="./build";
-fi;
+call_build_script()
+{
+    ./$1/build.sh
+}
 
-ORIGINAL_CWD=$(pwd);
-OUTPUT_DIR=$TARGET_DIR/~n2omatt;
+copy_build_script_output()
+{
+    mkdir -p ./Output/$1;
+    cp -rf ./$1/Output/* ./Output/$1
+}
+
+## Special Functions for Index / Certs
+call_build_script_index_and_certs()
+{
+    ./build_index_and_certs.sh
+}
+
+copy_build_script_output_index_and_certs()
+{
+    mkdir -p ./Output
+
+    cp index.html ./Output
+    cp -rf certs ./Output
+}
 
 
-################################################################################
-## Certifications                                                             ##
-################################################################################
-## Update the Certifications Repo
-cd $ORIGINAL_CWD
-cd ./_build_stuff/MyCerts;
-git pull origin master
 
-## Generate the Certifications
-cd $ORIGINAL_CWD
-cd ./_build_stuff/certification_scripts;
-./generate_certifications.sh;
+## Clean up
+rm -rf ./Output
+mkdir -p ./Output
+
+## Call the inner build scripts.
+call_build_script journal
+call_build_script lectures
+call_build_script resume
+
+call_build_script_index_and_certs
 
 
-################################################################################
-## Output                                                                     ##
-################################################################################
-## Create the output dir
-cd $ORIGINAL_CWD;
-rm -rf $OUTPUT_DIR;
-mkdir -p $OUTPUT_DIR;
+## Copy the output of the inner build scripts.
+copy_build_script_output journal
+copy_build_script_output lectures
+copy_build_script_output resume
 
-## Copy the stuff...
-cp index.html   $OUTPUT_DIR
-cp -rf resume   $OUTPUT_DIR
-cp -rf img      $OUTPUT_DIR
-cp -rf certs    $OUTPUT_DIR
-cp -rf lectures $OUTPUT_DIR
-cp -rf blog     $OUTPUT_DIR
-cp -rf journal  $OUTPUT_DIR
+copy_build_script_output_index_and_certs

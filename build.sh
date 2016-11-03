@@ -47,7 +47,8 @@ mkdir -p $TEMP_DIR;
 
 ## Create the ~n2omatt stuff.
 cd \~n2omatt
-./build.sh $TEMP_DIR
+./build.sh
+mv ./Output $TEMP_DIR/\~n2omatt
 
 
 ## Copy everything that was build to there.

@@ -1,0 +1,19 @@
+{
+    "watched-C++": [
+        { "CppCon 2016: Kenny Kerr & James McNellis “Embracing Standard C++ for the Windows Runtime\"" : "https://www.youtube.com/watch?v=lm4IwfiJ3EU" }
+    ],
+
+    "watched-Physics": [
+        { "Física I - Aula 1 - Espaço tempo e matéria" : "https://www.youtube.com/watch?v=3wokaNmktpw" },
+        { "Física I - Aula 2 - Referenciais e coordenadas" : "https://www.youtube.com/watch?v=-Fxb_oSq1Xc" },
+        { "Física I - Aula 3 - Conceitos Cinemáticos" : "https://www.youtube.com/watch?v=8j-jf3SOqs0" },
+        { "Física I - Aula 4 - Cinemática escalar" : "https://www.youtube.com/watch?v=GlyhkHVBprY" }
+    ],
+
+
+    "Read-Android": [
+            { "title"  : "Pro Android 5",
+              "pages"  : "52/768",
+              "status" : "continue" }
+        ]
+}

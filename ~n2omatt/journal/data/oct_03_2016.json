@@ -1,0 +1,13 @@
+{
+    "Read-C++": [
+        { "title"  : "Effective C++ 3rd ed",
+          "pages"  : "31 / 440",
+          "status" : "continue" }
+    ],
+
+    "Read-Android": [
+        { "title"  : "Effective C++ 3rd ed",
+          "pages"  : "40 / 728",
+          "status" : "continue" }
+    ]
+}

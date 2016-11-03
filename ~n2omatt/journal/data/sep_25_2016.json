@@ -1,0 +1,12 @@
+{
+    "watched-C++": [
+        { "CppCon 2016 - Dan Saks “extern c - Talking to C Programmers about C++”" : "https://www.youtube.com/watch?v=D7Sd8A6_fYU"},
+        { "CppCon 2016 - Jason Turner “Rich Code for Tiny Computers - A Simple Commodor 64 Game in C++17”" : "https://www.youtube.com/watch?v=zBkNBP00wJE"}
+    ],
+
+    "Read-Video Games": [
+        { "title"  : "Building Android Games with Cocos2d-x",
+          "pages"  : "105/160",
+          "status" : "continue" }
+    ]
+}

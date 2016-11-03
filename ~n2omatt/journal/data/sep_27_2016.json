@@ -1,0 +1,14 @@
+{
+    "Read-C++": [
+        { "title"  : "Effective C++ 3rd ed",
+          "pages"  : "28/440",
+          "status" : "start" }
+    ],
+
+    "Read-Video Games": [
+        { "title"  : "Building Android Games with Cocos2d-x",
+          "pages"  : "160/160",
+          "status" : "finish" }
+    ]
+}
+

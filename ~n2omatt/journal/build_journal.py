@@ -16,8 +16,8 @@ import os.path;
 buffer = [];
 
 def log_print(s):
-    pass;
-    # print s;
+    pass
+    # print s.encode("utf-8");
 
 def buf_print(s):
     log_print(s);
@@ -114,9 +114,16 @@ def process_file(filename):
     buf_print(get_end_list_tag());
 
 
-files_list = sort_files_by_filename_date(os.listdir("./data"));
+raw_files_list = os.listdir("./data");
+files_list = [];
+for filename in raw_files_list:
+    if(os.path.splitext(filename)[1] == ".json"):
+        files_list.append(filename);
+
+files_list = sort_files_by_filename_date(files_list);
 for filename in files_list:
-    process_file(os.path.join("./data", filename));
+    if(os.path.splitext(filename)[1] == ".json"):
+        process_file(os.path.join("./data", filename));
 
 for l in buffer:
     print(l.encode("utf-8"));

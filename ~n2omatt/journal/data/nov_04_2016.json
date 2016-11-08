@@ -19,7 +19,15 @@
         { "158,962,555,217,826,360,000 (Enigma Machine) - Numberphile" : "https://www.youtube.com/watch?v=G2_Q9FoD-oQ" },
         { "Flaw in the Enigma Code - Numberphile" : "https://www.youtube.com/watch?annotation_id=annotation_786414&feature=iv&src_vid=G2_Q9FoD-oQ&v=V4V2bpZlqx8" }
     ],
-    "watched-CS" : [
+
+    "watched-Computerphile" : [
+        { "Computer Science - Brian Kernighan on successful language design" : "https://www.youtube.com/watch?v=Sg4U4r_AgJU" },
+        { "Pixel Noise (Music from Images) - Computerphile" : "https://www.youtube.com/watch?v=c4cKlez0OCM" },
+        { "Zero Size Files - Computerphile" : "https://www.youtube.com/watch?v=kiTTAbeqQKY" },
+        { "Mouse Pointers &amp; Fitts&#39;s Law - Computerphile" : "https://www.youtube.com/watch?v=E3gS9tjACwU" },
+        { "Computers Without Memory - Computerphile" : "https://www.youtube.com/watch?v=vhiiia1_hC4" },
+        { "Unrolling the Loops - Computerphile" : "https://www.youtube.com/watch?v=guXgBe2wvEA" },
+        { "UNIX Special: Profs Kernighan &amp; Brailsford - Computerphile" : "https://www.youtube.com/watch?v=vT_J6xc-Az0" },
         { "Resizing Images - Computerphile" : "https://www.youtube.com/watch?v=AqscP7rc8_M" },
         { "Secrets Hidden in Images (Steganography) - Computerphile" : "https://www.youtube.com/watch?v=TWEXCYQKyDc" },
         { "UNIX: Making Computers Easier To Use -- AT&amp;T Archives film from 1982, Bell Laboratories" : "https://www.youtube.com/watch?v=XvDZLjaCJuw" },

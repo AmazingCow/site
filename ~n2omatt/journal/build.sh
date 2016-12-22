@@ -4,7 +4,6 @@
 ## date   : Nov 3, 2016                                                       ##
 ## author : n2omatt <n2o.matt@gmail.com>                                      ##
 ##                                                                            ##
-## Just call the actual build files...                                        ##
 ################################################################################
 
 ## Change the directory to directory of the script.
@@ -16,8 +15,12 @@ OLD_CWD=$PWD;
 
 cd $SCRIPTPATH;
 
-## Call the build script.
-./build.py
+rm -rf Output;
+mkdir Output;
+
+cp index_original.html Output/index.html
+cp -R photos           Output/photos
+cp -R img              Output/img
 
 ## Restore the OLD CWD
 cd $OLD_CWD

@@ -9,14 +9,18 @@
         body {
             margin:40px auto;
             max-width:650px;
-            line-height:1.6;
-            font-size:18px;
+            line-height:1.4;
+            font-size:16px;
             color:#444;
             padding:0 10px
         }
         h1,h2,h3 {
             line-height:1.2
         }
+
+        /*ul {*/
+            /*margin:auto auto auto -20px;*/
+        /*}*/
     </style>
 
     <title>N2OMatt's Resume - Amazing Cow</title>
@@ -52,14 +56,13 @@
     <p>
         Sou uma pessoa extremamente focada no trabalho, que busca desafios como uma
         forma de extrapolar meus limites. Confortável em <i>*nix</i>, considero a linha de
-        comando o ambiente mais acolhedor. Detalhista, busco sempre a perfeição matemática
-        em minha vida. Fluente em C++, C#, Objective-C e Python, possuo ótimas habilidades
-        de depuração.
-    </p>
-    <p>
+        comando o ambiente mais acolhedor.<br>
+        Detalhista, busco sempre a perfeição matemática em minha vida. <br>
+        Fluente em C++, C#, Objective-C e Python, possuo ótimas habilidades
+        de depuração. <br>
         Autoditada, com muita facilidade em aprender e ensinar. <br/>
-        Busco fazer parte de uma equipe experiente na qual eu possa evoluir e acrescentar.
     </p>
+    Busco fazer parte de uma equipe experiente na qual eu possa evoluir e acrescentar.
 
     <!-- ################################################################### -->
     <!-- ################################################################### -->
@@ -165,12 +168,14 @@
         <li> <b>PyGame</b>                             </li>
         <li> SDL (Simple DirectMedia Library)          </li>
         <li> SFML (Simple and Fast Multimedia Library) </li>
-        <li> Unity                                     </li>
+
+        <li>Unity </li>
         <ul>
             <li> DOTween </li>
             <li> NGUI    </li>
         </ul>
-        <li> <b>XNA / MonoGame</b></li>
+
+        <li><b>XNA / MonoGame</b></li>
         <ul>
             <li> XNATweener, TinyTween </li>
         </ul>
@@ -244,7 +249,7 @@
         <li> Jira / Yodiz                    </li>
         <li> <b>Padrões de Projeto</b>       </li>
         <li> Slack                           </li>
-        <li> UML                             <li>
+        <li> UML                             </li>
     </ul>
 
 
@@ -257,7 +262,7 @@
         <!-- ################################################################### -->
         <li> <b> Fire Horse </b> </li>
         <ul>
-            <li> Fist Punch (Cartoon Network)   </li>
+            <li> Fist Punch 2 (Cartoon Network) </li>
             <li> Like a Boss                    </li>
             <li> The Banner Saga (Stoic Studio) </li>
         </ul>
@@ -274,9 +279,13 @@
         <!-- Amazing Cow - Labs -->
         <li><b>Amazing Cow - Labs</b> </li>
         <ul>
+            <li>
+                Kaboom <sup><a href="#games_sup_3">[3]</a></sup>
+                (<a href="https://amazingcow.itch.io/kaboom">Itch.io</a>)
+            </li>
+
             <li> BowAndArrow <sup><a href="#games_sup_2">[2]</a></sup> </li>
             <li> Frogger     <sup><a href="#games_sup_3">[3]</a></sup> </li>
-            <li> Kaboom      <sup><a href="#games_sup_3">[3]</a></sup> </li>
             <li> RamIt       <sup><a href="#games_sup_4">[4]</a></sup> </li>
             <li> Taz         <sup><a href="#games_sup_4">[4]</a></sup> </li>
             <br/>
@@ -290,7 +299,14 @@
             <li> CorePegSolitaire <sup><a href="#games_sup_5">[5]</a></sup> </li>
             <li> CorePuzzle15     <sup><a href="#games_sup_5">[5]</a></sup> </li>
             <li> CorePuzzle16     <sup><a href="#games_sup_5">[5]</a></sup> </li>
-            <li> CoreWordsSearch  <sup><a href="#games_sup_5">[5]</a></sup> </li>
+            <li> CoreSokoban      <sup><a href="#games_sup_5">[5]</a></sup> </li>
+            </br>
+            <li> *CoreWordsSearch <sup><a href="#games_sup_5">[5]</a></sup> </li>
+            <li> *CoreSnake       <sup><a href="#games_sup_5">[5]</a></sup> </li>
+            <li> *CoreColorGrid   <sup><a href="#games_sup_5">[5]</a></sup> </li>
+            <li> *Core2048        <sup><a href="#games_sup_5">[5]</a></sup> </li>
+            <li> *CoreConnecta4   <sup><a href="#games_sup_5">[5]</a></sup> </li>
+            <li> *CoreTicTacToe   <sup><a href="#games_sup_5">[5]</a></sup> </li>
             <br>
             <li> CoreCoord  <sup><a href="#games_sup_6">[6]</a></sup> </li>
             <li> CoreClock  <sup><a href="#games_sup_6">[6]</a></sup> </li>
@@ -316,6 +332,9 @@
     </ul>
 
     <div style="font-size:15px">
+        Items marcados com <b>*</b> estão em desenvolvimento.
+        <br>
+        <br>
         <!-- Devilware / Eazz -->
         <div id="games_sup_1">
             [1] Produzidos com C#, XNA(Monogame) ou XAML - Windows Phone.
@@ -341,7 +360,7 @@
             Desta forma o <b>Core</b> é agnóstico de plataforma, <i>UI</i>, etc, mantendo-se concentrado
             em apenas representar de maneira canônica a mecânica do jogo, enquanto o
             <b>Game</b> lida com questões como, <i>framerate</i>, <i>input</i>, gráficos, etc.<br/>
-            </div>
+        </div>
 
         <div id="games_sup_6">
             [6] Bibliotecas que facilitam em muito a criação de jogos, porém

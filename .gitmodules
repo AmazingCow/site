@@ -1,3 +1,6 @@
 [submodule "~n2omatt/_build_stuff/MyCerts"]
 	path = ~n2omatt/_build_stuff/MyCerts
 	url = http://github.com/n2omatt/MyCerts
+[submodule "n2omatt/site"]
+	path = n2omatt/site
+	url = https://github.com/N2OMatt/site

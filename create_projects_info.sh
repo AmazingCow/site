@@ -38,7 +38,7 @@ for ORG_NAME in $(ls $BASE_DIR); do
         fi;
 
         ## (2) Update the branch...
-        git pull -u origin site_info  > /dev/null 2>&1;
+        git pull origin site_info > /dev/null 2>&1;
         cd - > /dev/null
 
         ## (3) Process the info.

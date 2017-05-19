@@ -1,9 +1,10 @@
-#!/bin/bash
+#!/usr/bin/python
+#coding=utf-8
 ##----------------------------------------------------------------------------##
 ##               █      █                                                     ##
 ##               ████████                                                     ##
 ##             ██        ██                                                   ##
-##            ███  █  █  ███        build.sh                                  ##
+##            ███  █  █  ███        replace_index_template.py                 ##
 ##            █ █        █ █        site                                      ##
 ##             ████████████                                                   ##
 ##           █              █       Copyright (c) 2017                        ##
@@ -39,15 +40,87 @@
 ##                                  Enjoy :)                                  ##
 ##----------------------------------------------------------------------------##
 
-################################################################################
-## Clean everything at start                                                  ##
-################################################################################
-echo "--> Cleaning Output folder...";
-rm    -vrf "_Output";
-mkdir -vp  "_Output";
 
-./update_repositories.sh
-./create_projects_directories.sh
-./create_projects_documentation.sh
-./create_projects_info.sh
-./replace_index_template.py
+################################################################################
+## Imports                                                                    ##
+################################################################################
+import sys;
+import os;
+import os.path;
+
+
+################################################################################
+## Constants                                                                  ##
+################################################################################
+kProjectsInfo_Path = "intermediate/projects_info";
+
+
+################################################################################
+## Functions                                                                  ##
+################################################################################
+def read_file_text(filename):
+    entry_file = open(filename);
+    all_lines  = entry_file.readlines();
+
+    entry_file.close();
+
+    return "".join(all_lines);
+
+def write_file_text(blog_entry_fullpath, text):
+    outfile  = open(blog_entry_fullpath, "w");
+
+    outfile.write(text);
+    outfile.close();
+
+
+def generate_html_for_category(category):
+    fullpath      = os.path.join(kProjectsInfo_Path, category);
+    projects_text = read_file_text(fullpath);
+    count         = len(projects_text.split("<li>")) -1;
+    category_url  = category.replace(" ", "-");
+
+    ## THIS IS NASTY:
+    if(category_url == "Game-Tools"):
+        category_url = "Game-Tool";
+
+    html_fmt = """
+    <p>
+        <b>{category_name}</b>
+            (<a href=\"http://github.com/AmazingCow-{category_url}\">Github</a>)
+            - {projects_count} projects
+        <br/>
+    </p>
+    <ul>
+        {projects_list}
+    </ul>
+    """;
+
+    return html_fmt.format(
+        category_name  = category,
+        category_url   = category_url,
+        projects_count = count,
+        projects_list  = projects_text
+    );
+
+
+
+################################################################################
+## Script                                                                     ##
+################################################################################
+def main():
+    print "--> Replacing index template...";
+
+    html_contents = "";
+    for category in sorted(os.listdir(kProjectsInfo_Path)):
+        html_contents += generate_html_for_category(category);
+
+    index_template = read_file_text("index.template");
+    index_replaced = index_template.replace(
+        "__TEMPLATE_REPLACE_PROJECTS__",
+        html_contents
+    );
+
+    write_file_text("_Output/index.html", index_replaced);
+
+if __name__ == '__main__':
+    main()

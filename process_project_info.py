@@ -4,7 +4,7 @@
 ##               █      █                                                     ##
 ##               ████████                                                     ##
 ##             ██        ██                                                   ##
-##            ███  █  █  ███        download_repos.py                         ##
+##            ███  █  █  ███        process_project_info.py                   ##
 ##            █ █        █ █        site                                      ##
 ##             ████████████                                                   ##
 ##           █              █       Copyright (c) 2017                        ##
@@ -45,90 +45,120 @@
 ################################################################################
 import os;
 import os.path;
-import urllib;
-import json;
+import sys;
+
+## Our info file looks like this.
+## I think that the sections are straightforward to understand,
+## the only one that needs further explanation is the "Section".
+##
+## The "Section" section is the place that the project will be
+## put on the site. So if a project is a Game we indicate there
+## so in the index.html it will be placed on Games section.
+##
+## Title:
+##     CoreClock
+## Description:
+##     Small library intended to easy the time tracking in games.
+## URL:
+##     Github, http://github.com/AmazingCow-Game-Core/CoreClock
+##     Docs, docs.amazingcow.com/coreclock
+## Owner:
+##     AmazingCow Labs
+## Section:
+##     Game Core
 
 ################################################################################
 ## Constants                                                                  ##
 ################################################################################
-BASE_URL  = "https://api.github.com/users/{ORGANIZATION_NAME}/repos"
-BASE_PATH = "amazingcow_repos"
+kTags = ["Title:", "Description:", "URL:", "Owner:", "Section:"];
 
-ORGANIZATION_NAMES = [
-    "AmazingCow-Game-Core",
-    "AmazingCow-Game-Framework",
-    "AmazingCow-Game-Tool",
-    "AmazingCow-Game",
-    "AmazingCow-Libs",
-    "AmazingCow-Tools",
-    "AmazingCow-Imidiar",
-];
+kHTML_Fmt = """
+<li>
+    <b>{title}:</b> ({urls})
+    <br>
+    {desc}
+</li>
+<hr>
+""";
+
+kOutputPath = "intermediate/projects_info";
+
+################################################################################
+## Variables                                                                  ##
+################################################################################
+result    = "";
+info_dict = {};
+curr_key  = None;
+
+################################################################################
+## Functions                                                                  ##
+################################################################################
+def make_urls_from_info(urls_list):
+    r = "";
+    for i in xrange(0, len(urls_list)):
+        url_info = urls_list[i];
+
+        splited = url_info.split(",");
+        url     = splited[1];
+        name    = splited[0];
+
+        r += "<a href=\"{0}\">{1}</a>".format(
+            url,
+            name
+        );
+
+        if(i + 1 < len(urls_list)):
+            r += " - ";
+
+    return r;
 
 
 ################################################################################
-## Helper Functions                                                           ##
+## Script                                                                    ##
 ################################################################################
-def make_dir(name):
-    fullname = os.path.join(BASE_PATH, name);
-    if(os.path.isdir(fullname) == False):
-        print "Creating directory: ({0})".format(fullname);
-        os.system("mkdir -p {0}".format(fullname));
+def main(filename):
+    in_file  = open(filename);
 
-    return fullname;
+    print "---> Processing Project Info for: ({0})".format(filename);
 
+    for line in in_file.readlines():
+        line = line.lstrip(" ").replace("\n", "");
 
-def fetch_list_repos(organization_name):
-    url      = BASE_URL.format(ORGANIZATION_NAME=organization_name);
-    response = urllib.urlopen(url);
-    data     = json.loads(response.read());
-
-
-    print "Fetching repos for: ({0})".format(organization_name);
-    repos = [];
-    for info in data:
-        repos.append(
-            {
-                "url"  : info["clone_url"],
-                "name" : info["name"     ]
-            }
-        );
-
-    print "\tDone. Found ({0}) repos...".format(len(repos));
-    return repos;
-
-
-def clone_repos(repos_info, repos_dir):
-    for repo_info in repos_info:
-        print "Clonning repo ({0}) in ({1})".format(
-            repo_info["name"],
-            repos_dir
-        );
-
-        repo_full_dir = os.path.join(repos_dir, repo_info["name"]);
-
-        if(os.path.isdir(repo_full_dir)):
-            print "\tRepo ({0}) already cloned...".format(repo_info["name"]);
+        if(line == ""):
             continue;
 
-        ## Commands...                # Supress output...
-        mkdir    = "mkdir -p  {0}   > /dev/null 2>&1".format(repo_full_dir);
-        cd       = "cd        {0}   > /dev/null 2>&1".format(repo_full_dir);
-        clone    = "git clone {0} . > /dev/null 2>&1".format(repo_info["url"]);
+        if(line in kTags):
+            curr_key            = line;
+            info_dict[curr_key] = [];
+            continue;
 
-        full_cmd = "{0} && {1} && {2}".format(
-            mkdir,
-            cd,
-            clone,
-        );
-        os.system(full_cmd);
+        info_dict[curr_key].append(line);
 
-################################################################################
-## Script                                                                     ##
-################################################################################
-for organization_name in ORGANIZATION_NAMES:
-     repos_dir  = make_dir(organization_name);
-     repos_info = fetch_list_repos(organization_name);
-     clone_repos(repos_info, repos_dir);
 
-     print "----\n"
+    html = kHTML_Fmt.format(
+        title = "".join(info_dict["Title:"]                   ),
+        urls  = "".join(make_urls_from_info(info_dict["URL:"])),
+        desc  = "".join(info_dict["Description:"]             )
+    );
+
+    section_name = "".join(info_dict["Section:"]);
+    fullpath     = os.path.join(kOutputPath, section_name);
+
+    out_file = open(fullpath, "a");
+    out_file.write(html);
+
+    out_file.close();
+    in_file.close ();
+
+
+if __name__ == '__main__':
+    filename = sys.argv[1];
+    try:
+        main(filename);
+    except Exception as e:
+        print filename;
+        print e;
+
+        import pdb;
+        pdb.set_trace();
 

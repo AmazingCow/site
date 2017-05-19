@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Amazing Cow</title>
+    <link rel="icon" href="/favicon.ico" type="image/ico" />
+    <style type="text/css">
+        body {
+            line-height:1.4;
+            font-size:16px;
+            color:#444;
+        }
+    </style>
+</head>
+
+<!-- Body -->
+<body>
+
+<!-- Menu  -->
+<p align="center">
+    <font size="+4">Amazing Cow</font><br/>
+    <font size="-1">
+        <a href="http://github.com/AmazingCow/">[github]</a>
+    </font>
+</p>
+
+
+<!-- ####################################################################### -->
+<!-- Project List                                                            -->
+<!-- ####################################################################### -->
+<table width="100%" cellpadding="7" cellspacing="0" align="center" border="1">
+    <!-- Left Column -->
+    <tr>
+        <td rowspan="4" valign="top">
+
+        <!-- ############################################################### -->
+        <!-- Games                                                           -->
+        <!-- ############################################################### -->
+        <p>
+            <!-- Title -->
+            <b>Games</b> - 1 project
+            <br/>
+            Our full fledged games, made with a lot of
+            <font color="red">&#60&#51</font> -
+            We hope that you enjoy!
+            <br/>
+        </p>
+
+        <!-- List -->
+        <ul>
+            <!-- Memory - Amazing Cow! -->
+            <li>
+                <!-- Title -->
+                <b>Memory - Amazing Cow!</b>
+                <font size='-1'>
+                     (<a href='https://play.google.com/store/apps/details?id=com.amazingcow.gamememory'>Google Play</a>)
+                </font>
+                <br/>
+
+                <!-- Description -->
+                <p>
+                    <p>
+                        An AMAZING and EYE CANDY Memory Game.
+                    </p>
+                    <p>
+                        Simple, but really addict-able Memory is a puzzle game made for children  </br>
+                        (But we found that adults felt in love with adorable
+                        characters in game).
+                    </p>
+                    <p>
+                        With 3 game challenging game modes and with a total of  <br/>
+                        45 levels, you have 135 stars to collect!
+                    </p>
+                </p>
+                <!-- Images -->
+                <p>
+                    <b>Images</b>:
+                    <br>
+                    <div id="header" style="width:600px;">
+                        <!-- Images -->
+                        <a href="https://play.google.com/store/apps/details?id=com.amazingcow.gamememory"><img src="img/memory/1.png" width="10%" height="10%"></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.amazingcow.gamememory"><img src="img/memory/2.png" width="10%" height="10%"></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.amazingcow.gamememory"><img src="img/memory/3.png" width="10%" height="10%"></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.amazingcow.gamememory"><img src="img/memory/4.png" width="10%" height="10%"></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.amazingcow.gamememory"><img src="img/memory/5.png" width="10%" height="10%"></a>
+                    </div>
+                </p>
+
+                <!-- Reviews -->
+                <p>
+                    <b>Reviews:</b>
+                    <br>
+                    <ul>
+                        <li><a href="https://webstuff.eti.br/jogos/">Web Stuff</a></li>
+                    </ul>
+                </p>
+
+                <!-- Download -->
+                <p>
+                    <a href='https://play.google.com/store/apps/details?id=com.amazingcow.gamememory'>
+                        Download in Google Play!
+                    </a>
+                </p>
+            </li>
+            <hr/>
+        </ul>
+
+        __TEMPLATE_REPLACE_PROJECTS__
+
+        </td>
+    </tr>
+    <!-- End of Left Column -->
+
+
+    <!-- ################################################################### -->
+    <!-- Right Column                                                        -->
+    <!-- ################################################################### -->
+    <tr>
+        <td valign="top">
+        <!-- ############################################################### -->
+        <!-- Stores                                                         -->
+        <!-- ############################################################### -->
+        <p>
+            <b>Stores:</b>
+            <ul>
+                <li>
+                    <a href="https://play.google.com/store/apps/developer?id=Amazing+Cow">
+                        Google Play
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://amazingcow.itch.io/">itch.io</a>
+                </li>
+            </ul>
+        </p>
+        <!-- End of Stores -->
+
+
+        <!-- ############################################################### -->
+        <!-- Contact                                                         -->
+        <!-- ############################################################### -->
+        <p>
+            <b>Contact:</b>
+            <ul>
+                <li>Email:
+                    <a href="mailto:sayhello@amazingcow.com">sayhello@amazingcow.com</a>
+                </li>
+
+                <li>Linkedin:
+                    <a href="https://www.linkedin.com/company/amazing-cow">amazing-cow</a>
+                </li>
+
+                <li>Twitter:
+                    <a href="http://www.twitter.com/_amazingcow_">_amazingcow_</a>
+                </li>
+
+                <li>Instagram:
+                    <a href="http://www.instagram.com/_amazingcow_">_amazingcow_</a>
+                </li>
+
+                <li>Facebook:
+                    <a href="http://www.facebook.com/amazingcow">facebook.com/amazingcow</a>
+                </li>
+
+                <li>Phone:
+                    +55 (11) 9-8499-6065
+                </li>
+
+            </ul>
+        </p>
+        <!-- End of Contact -->
+
+
+        <!-- News -->
+        <p>
+            <b>News:</b>
+            <ul>
+                <li> Remove the link for PhotoShow and Tasks repos
+                     since we won't develop them anymore. <br>
+                     <font size=-3>Fri Jul 29 20:53:49 2016 UTC</font>
+
+                <li> Ram It game is released (v1.1.0) <br/>
+                     You can downlaod it in it's
+                     <a href="https://github.com/AmazingCow-Game/Game_RamIt">github page</a>
+                     <font size="-3">Sat Jul 16 22:04:54 UTC 2016</font>
+
+                <li> Bow and Arrow game is released (v1.0.0) <br/>
+                     You can download it in it's
+                     <a href="https://github.com/AmazingCow-Game/Game_BowAndArrow">github page</a>
+                     <font size="-3">Sat Jul 16 18:42:27 UTC 2016</font>
+
+                <li> We update several of our GameCore Project pages in Github.
+                <font size="-3">Sat Jul 16 16:15:48 UTC 2016</font>
+
+                <li> Remove the project page links that we don't currently have.<br/>
+                     Add the documentation links.
+                <font size="-3">Fri Jul 15 18:28:07 UTC 2016</font>
+
+                <li>New site :D
+                <font size="-3">Tue Jul 12 22:03:24 UTC 2016 </font>
+            </ul>
+        </p>
+        <!-- End of News -->
+
+        <!-- ############################################################### -->
+        <!-- N2OMatt                                                         -->
+        <!-- ############################################################### -->
+        <p>
+            <b>N2OMatt</b>
+            <ul>
+                <li> <a href="./n2omatt/">Site</a>
+                <li> <a href="http://github.com/N2OMatt">Github</a>
+            </ul>
+        </p>
+        <!-- End of N2OMatt -->
+
+        </td>
+    </tr>
+    <!-- End of Right Column -->
+</table>
+
+
+<!-- ####################################################################### -->
+<!--  Made with Love <3                                                      -->
+<!-- ####################################################################### -->
+<p align="center">
+    <font size="-3"> Made with <3 </font>
+</p>
+  </body>
+</html>

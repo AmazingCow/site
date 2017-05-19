@@ -51,3 +51,4 @@ mkdir -vp  "_Output";
 ./create_projects_documentation.sh
 ./create_projects_info.sh
 ./replace_index_template.py
+./copy_images.sh

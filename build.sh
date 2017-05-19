@@ -39,6 +39,8 @@
 ##                                  Enjoy :)                                  ##
 ##----------------------------------------------------------------------------##
 
+DESTINATION_DIR="public_html"
+
 ################################################################################
 ## Clean everything at start                                                  ##
 ################################################################################
@@ -46,9 +48,23 @@ echo "--> Cleaning Output folder...";
 rm    -vrf "_Output";
 mkdir -vp  "_Output";
 
+
+################################################################################
+## Build the stuff...                                                         ##
+################################################################################
 ./update_repositories.sh
 ./create_projects_directories.sh
 ./create_projects_documentation.sh
 ./create_projects_info.sh
 ./replace_index_template.py
 ./copy_images.sh
+
+
+################################################################################
+## Copy to destination folder                                                 ##
+################################################################################
+rm -rfv $DESTINATION_DIR/docs
+rm -rfv $DESTINATION_DIR/img
+rm -rfv $DESTINATION_DIR/index.html
+
+cp -rv _Output/* $DESTINATION_DIR/

@@ -33,9 +33,9 @@ for ORG_NAME in $(ls $BASE_DIR); do
         cd - > /dev/null;
 
         ## Copy the generated documentation to output folder.
-        if [ -e "$SRC_DIR/doxygen" ]; then
+        if [ -e "$SRC_DIR" ]; then
             echo -e "Copying documentation for ($PROJECT_NAME)...";
-            cp -r $SRC_DIR/doxygen $DST_DIR/doxygen
+            cp -r $SRC_DIR/doxygen/* $DST_DIR
             echo -e "\tDone..."
         fi;
     done;

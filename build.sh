@@ -94,6 +94,7 @@ cd - > /dev/null
 rm -rfv $DESTINATION_DIR/docs
 rm -rfv $DESTINATION_DIR/img
 rm -rfv $DESTINATION_DIR/index.html
+rm -rfv $DESTINATION_DIR/projects
 
 cp -rv _Output/* $DESTINATION_DIR/
 

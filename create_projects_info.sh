@@ -28,8 +28,8 @@ for ORG_NAME in $(ls $BASE_DIR); do
         echo "($PROJECT_NAME) - Creating info...";
         ## (1) Check if we have on site_info branch already.
         ##     If so, just checkout, otherwise create a branch...
-        git rev-parse --verify site_info;
-        if [ $? == 0 ]; then
+        BRANCH_COUNT=$(git branch -a | grep  "site_info" | wc -l);
+        if [ $BRANCH_COUNT == 2 ]; then
             echo -e "\t  Already have site_info branch...";
             git checkout site_info > /dev/null 2>&1;
         else
@@ -38,7 +38,7 @@ for ORG_NAME in $(ls $BASE_DIR); do
         fi;
 
         ## (2) Update the branch...
-        git pull origin site_info > /dev/null 2>&1;
+        git pull origin site_info  2>&1;
         cd - > /dev/null
 
         ## (3) Process the info.

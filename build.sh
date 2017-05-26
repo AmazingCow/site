@@ -39,7 +39,10 @@
 ##                                  Enjoy :)                                  ##
 ##----------------------------------------------------------------------------##
 
-DESTINATION_DIR="public_html"
+DESTINATION_DIR="../public_html"
+if [ -n "$1" ]; then
+    DESTINATION_DIR="$1";
+fi;
 
 ################################################################################
 ## Clean everything at start                                                  ##

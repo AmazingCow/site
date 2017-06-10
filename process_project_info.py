@@ -158,7 +158,6 @@ if __name__ == '__main__':
     except Exception as e:
         print filename;
         print e;
-
-        import pdb;
-        pdb.set_trace();
+        # import pdb;
+        # pdb.set_trace();
 

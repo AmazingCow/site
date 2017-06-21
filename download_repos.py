@@ -56,12 +56,12 @@ BASE_PATH = "amazingcow_repos"
 
 ORGANIZATION_NAMES = [
     "AmazingCow-Game-Core",
-    # "AmazingCow-Game-Framework",
-    # "AmazingCow-Game-Tool",
-    # "AmazingCow-Game",
-    # "AmazingCow-Libs",
-    # "AmazingCow-Tools",
-    # "AmazingCow-Imidiar",
+    "AmazingCow-Game-Framework",
+    "AmazingCow-Game-Tool",
+    "AmazingCow-Game",
+    "AmazingCow-Libs",
+    "AmazingCow-Tools",
+    "AmazingCow-Imidiar",
 ];
 
 

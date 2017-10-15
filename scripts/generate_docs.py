@@ -61,7 +61,7 @@ for dir in os.listdir(kDirRepos):
     print("{item} , {content}, {url}".format(
         item    = "",
         content = dir,
-        url     = os.path.join("./docs", dir)
+        url     = os.path.join("/docs", dir)
     ));
 
     os.chdir(kDirRepos);

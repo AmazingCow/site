@@ -50,6 +50,7 @@ for dir in os.listdir(kDirRepos):
     os.system("doxygen > /dev/null 2>&1");
 
     ## Copy the generate files to output folder.
+    sys.stderr.write("#Generating docs for: ({0})\n".format(dir));
     os.system("mkdir -p {dir}".format(dir=dir));
     os.system("cp -R {repo_docs_dir} {docs_dir}".format(
         repo_docs_dir = os.path.join(fullpath, "doxygen"),

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Amazing Cow</title>
+    <link rel="icon" href="/favicon.ico" type="image/ico" />
+    <style type="text/css">
+        body {
+            line-height:1.4;
+            font-size:16px;
+            color:#444;
+        }
+    </style>
+</head>
+
+<!-- Body -->
+<body>
+
+<!-- Menu  -->
+<p align="center">
+    <font size="+4">Amazing Cow</font><br/>
+    <a href="/">[Back to Home]</a> --
+    <a href="http://github.com/AmazingCow/">[github]</a> --
+    <a href="/docs/">[docs]</a> --
+    <a href="/floss/">[floss]</a> --
+    <a href="/contact">[contact]</a>
+</p>
+
+
+
+</body>
+</html>

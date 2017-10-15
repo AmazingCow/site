@@ -4,3 +4,6 @@
 [submodule "n2omatt/site"]
 	path = n2omatt/site
 	url = https://github.com/N2OMatt/site
+[submodule "lib/DownloadRepos"]
+	path = lib/DownloadRepos
+	url = https://github.com/N2OMatt/DownloadRepos

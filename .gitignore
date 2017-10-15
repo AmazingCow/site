@@ -15,6 +15,7 @@ _Output/
 projects_info/
 intermediate/
 public_html/
-docs
 repos
 _output
+docs/*
+templates/docs/docs.list

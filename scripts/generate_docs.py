@@ -43,18 +43,18 @@ for dir in os.listdir(kDirRepos):
     fullpath = os.path.join(kDirRepos, dir);
     os.chdir(fullpath);
 
-    if(not os.path.exists("Doxyfile")):
+    if(not os.path.exists("docs/Doxyfile")):
         continue;
 
     ## Generate the docs.
-    os.system("doxygen > /dev/null 2>&1");
+    os.system("doxygen docs/Doxyfile > /dev/null 2>&1");
 
     ## Copy the generate files to output folder.
     sys.stderr.write("#Generating docs for: ({0})\n".format(dir));
     os.system("mkdir -p {dir}".format(dir=dir));
     os.system("cp -R {repo_docs_dir} {docs_dir}".format(
         repo_docs_dir = os.path.join(fullpath, "doxygen"),
-        docs_dir      = os.path.join(kDirDocs, dir)
+        docs_dir      = os.path.join(kDirDocs, dir,)
     ));
 
     ## Append project to list.

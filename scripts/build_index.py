@@ -68,6 +68,9 @@ def run_template(line):
     if(action == "list"):
         return line[0:start_index] + build_template_list(content) + line[end_index:];
 
+    if(action == "process"):
+        return build_process_projects();
+
     return "";
 
 
@@ -78,6 +81,14 @@ def build_template_list(list_name):
     return run_command("{script} {filename}".format(
         script   = scriptname,
         filename = filename
+    ));
+
+
+def build_process_projects():
+    scriptname = os.path.join(kDirScript, "process_project_info.py");
+
+    return run_command("{script}".format(
+        script = scriptname,
     ));
 
 

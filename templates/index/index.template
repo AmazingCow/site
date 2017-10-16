@@ -106,7 +106,9 @@
             <hr/>
         </ul>
 
-        __TEMPLATE_REPLACE_PROJECTS__
+
+        __TEMPLATE_PROCESS_PROJECTS___
+
 
         </td>
     </tr>

@@ -19,9 +19,11 @@
 <!-- Menu  -->
 <p align="center">
     <font size="+4">Amazing Cow</font><br/>
-    <font size="-1">
-        <a href="http://github.com/AmazingCow/">[github]</a>
-    </font>
+    <a href="/">[Back to Home]</a> --
+    <a href="http://github.com/AmazingCow/">[github]</a> --
+    <a href="/docs/">[docs]</a> --
+    <a href="/floss/">[floss]</a> --
+    <a href="/contact">[contact]</a>
 </p>
 
 __TEMPLATE_LIST_docs/docs__

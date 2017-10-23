@@ -100,10 +100,10 @@ def process_info(info_file):
             info[line] = read_info(lines, i + 1);
             i += len(info[line]);
 
-    info["Title:"       ] = "".join(info["Title:"      ]);
-    info["Description:" ] = "".join(info["Description:"]);
-    info["Owner:"       ] = "".join(info["Owner:"      ]);
-    info["Section:"     ] = "".join(info["Section:"    ]);
+    info["Title:"       ] = " ".join(info["Title:"      ]);
+    info["Description:" ] = " ".join(info["Description:"]);
+    info["Owner:"       ] = " ".join(info["Owner:"      ]);
+    info["Section:"     ] = " ".join(info["Section:"    ]);
 
     return info;
 
